@@ -49,6 +49,12 @@
             </div>
             <h1 class="text-2xl sm:text-3xl font-extrabold text-emerald-950 tracking-tight">SMA SWASTA PAB 5 KLUMPANG</h1>
             <p class="text-slate-600 text-sm font-medium mt-1">Sistem Cerdas Rekomendasi Ekstrakurikuler Berbasis Minat & Bakat</p>
+            
+            <!-- Identitas Pembuat Aplikasi -->
+            <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 rounded-lg border border-amber-200/80 text-amber-900 text-xs font-bold">
+              <i data-lucide="code" class="w-3.5 h-3.5 text-amber-600"></i>
+              <span>Pengembang Aplikasi: <span class="text-emerald-900 font-extrabold">Muhammad Riyadh, M.Pd</span></span>
+            </div>
           </div>
 
         </div>
@@ -166,111 +172,116 @@
     </form>
 
     <!-- Hasil Rekomendasi Modal Card -->
-<div id="hasilBox" class="hidden mt-10 glass-card rounded-3xl p-8 shadow-2xl border-2 border-emerald-500 bg-white">
-  
-  <!-- Document Area yang Akan Dicetak ke PDF -->
-  <div id="areaCetakPDF" class="p-8 bg-white text-slate-900 border border-slate-200 rounded-xl">
-    
-    <!-- KOP SURAT SEKOLAH RESMI -->
-    <div class="flex items-center justify-between pb-4 mb-6 border-b-4 border-double border-emerald-900">
-      <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
-        <img src="/logo.png" alt="Logo PAB 5" class="w-full h-full object-contain">
-      </div>
-      <div class="text-center flex-1 px-4">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-600">YAYASAN PERKUMPULAN AMAL BAKTI (PAB)</h2>
-        <h1 class="text-xl font-black text-emerald-950 uppercase tracking-wide">SMA SWASTA PAB 5 KLUMPANG</h1>
-        <p class="text-[11px] font-semibold text-slate-600 mt-0.5">NSS: 302020104005 | NPSN: 10214081 | Akreditasi A</p>
-        <p class="text-[10px] text-slate-500 italic">Jl. Klumpang Kampung, Kec. Hamparan Perak, Kab. Deli Serdang, Sumatera Utara 20374</p>
-      </div>
-      <div class="w-20 h-20 opacity-0"></div> <!-- Spacer penyeimbang layout -->
-    </div>
-
-    <!-- JUDUL SURAT -->
-    <div class="text-center mb-6">
-      <h3 class="text-sm font-extrabold uppercase underline tracking-wider text-emerald-950">SURAT REKOMENDASI EKSTRAKURIKULER</h3>
-      <p class="text-[10px] text-slate-500 mt-0.5">Nomor: 421.3 / <span id="pdfNoSurat">---</span> / SMA-PAB5 / 2026</p>
-    </div>
-
-    <!-- IDENTITAS SISWA -->
-    <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
-      <h4 class="text-xs font-bold uppercase text-emerald-900 mb-2 pb-1 border-b border-slate-200">A. Identitas Peserta Didik</h4>
-      <table class="w-full text-xs font-medium text-slate-800">
-        <tr>
-          <td class="py-1 w-36 font-semibold text-slate-500">Nama Lengkap</td>
-          <td class="py-1 w-4 text-center">:</td>
-          <td id="pdfNama" class="py-1 font-bold text-slate-900"></td>
-        </tr>
-        <tr>
-          <td class="py-1 font-semibold text-slate-500">NISN</td>
-          <td class="py-1 text-center">:</td>
-          <td id="pdfNISN" class="py-1 font-mono"></td>
-        </tr>
-        <tr>
-          <td class="py-1 font-semibold text-slate-500">Kelas / Rombel</td>
-          <td class="py-1 text-center">:</td>
-          <td id="pdfKelas" class="py-1 font-bold text-emerald-800"></td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- HASIL DIAGNOSTIK & REKOMENDASI -->
-    <div class="mb-8">
-      <h4 class="text-xs font-bold uppercase text-emerald-900 mb-2 pb-1 border-b border-slate-200">B. Hasil Analisis Diagnostik Minat & Bakat</h4>
+    <div id="hasilBox" class="hidden mt-10 glass-card rounded-3xl p-8 shadow-2xl border-2 border-emerald-500 bg-white">
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
-          <span class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Tipe Kepribadian (Holland Code)</span>
-          <div id="pdfKategori" class="text-lg font-black text-emerald-950"></div>
+      <!-- Document Area yang Akan Dicetak ke PDF -->
+      <div id="areaCetakPDF" class="p-8 bg-white text-slate-900 border border-slate-200 rounded-xl">
+        
+        <!-- KOP SURAT SEKOLAH RESMI -->
+        <div class="flex items-center justify-between pb-4 mb-6 border-b-4 border-double border-emerald-900">
+          <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+            <img src="/logo.png" alt="Logo PAB 5" class="w-full h-full object-contain">
+          </div>
+          <div class="text-center flex-1 px-4">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-600">YAYASAN PERKUMPULAN AMAL BAKTI (PAB)</h2>
+            <h1 class="text-xl font-black text-emerald-950 uppercase tracking-wide">SMA SWASTA PAB 5 KLUMPANG</h1>
+            <p class="text-[11px] font-semibold text-slate-600 mt-0.5">NSS: 302020104005 | NPSN: 10214081 | Akreditasi A</p>
+            <p class="text-[10px] text-slate-500 italic">Jl. Klumpang Kampung, Kec. Hamparan Perak, Kab. Deli Serdang, Sumatera Utara 20374</p>
+          </div>
+          <div class="w-20 h-20 opacity-0"></div> <!-- Spacer penyeimbang layout -->
         </div>
 
-        <div class="md:col-span-2 bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Rekomendasi Ekstrakurikuler Wajib / Pilihan</span>
-          <ul id="pdfListEkstra" class="space-y-1"></ul>
+        <!-- JUDUL SURAT -->
+        <div class="text-center mb-6">
+          <h3 class="text-sm font-extrabold uppercase underline tracking-wider text-emerald-950">SURAT REKOMENDASI EKSTRAKURIKULER</h3>
+          <p class="text-[10px] text-slate-500 mt-0.5">Nomor: 421.3 / <span id="pdfNoSurat">---</span> / SMA-PAB5 / 2026</p>
         </div>
-      </div>
 
-      <p class="text-[11px] text-slate-600 italic leading-relaxed">
-        *Rekomendasi di atas dihasilkan secara otomatis oleh Sistem Cerdas Berbasis Algoritma RIASEC berdasarkan preferensi jawaban siswa.
-      </p>
-    </div>
+        <!-- IDENTITAS SISWA -->
+        <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <h4 class="text-xs font-bold uppercase text-emerald-900 mb-2 pb-1 border-b border-slate-200">A. Identitas Peserta Didik</h4>
+          <table class="w-full text-xs font-medium text-slate-800">
+            <tr>
+              <td class="py-1 w-36 font-semibold text-slate-500">Nama Lengkap</td>
+              <td class="py-1 w-4 text-center">:</td>
+              <td id="pdfNama" class="py-1 font-bold text-slate-900"></td>
+            </tr>
+            <tr>
+              <td class="py-1 font-semibold text-slate-500">NISN</td>
+              <td class="py-1 text-center">:</td>
+              <td id="pdfNISN" class="py-1 font-mono"></td>
+            </tr>
+            <tr>
+              <td class="py-1 font-semibold text-slate-500">Kelas / Rombel</td>
+              <td class="py-1 text-center">:</td>
+              <td id="pdfKelas" class="py-1 font-bold text-emerald-800"></td>
+            </tr>
+          </table>
+        </div>
 
-    <!-- AREA TANDA TANGAN & STEMPEL DIGITAL -->
-    <div class="mt-10 pt-4 flex justify-between items-end">
-      <div class="text-center w-48">
-        <p class="text-[11px] font-semibold text-slate-600">Mengetahui,</p>
-        <p class="text-[11px] font-bold text-slate-800 mb-12">Guru Bimbingan Konseling (BK)</p>
-        <p class="text-xs font-bold text-slate-900 underline">( .................................... )</p>
-        <p class="text-[10px] text-slate-500">NIP / NPY. -</p>
-      </div>
-
-      <div class="relative text-center w-64">
-        <p class="text-[11px] font-semibold text-slate-600">Klumpang, <span id="pdfTanggalCetak"></span></p>
-        <p class="text-[11px] font-bold text-slate-800 mb-2">Kepala SMA Swasta PAB 5 Klumpang</p>
-
-        <!-- CONTAINER STEMPEL & TTD -->
-        <div class="relative h-24 my-1 flex items-center justify-center">
-          <!-- Stempel Digital (Position Absolute dengan Opacity) -->
-          <img src="/stempel.png" alt="Stempel Sekolah" class="absolute w-28 h-28 object-contain opacity-85 left-4 top-[-10px] pointer-events-none z-10">
+        <!-- HASIL DIAGNOSTIK & REKOMENDASI -->
+        <div class="mb-8">
+          <h4 class="text-xs font-bold uppercase text-emerald-900 mb-2 pb-1 border-b border-slate-200">B. Hasil Analisis Diagnostik Minat & Bakat</h4>
           
-          <!-- Tanda Tangan Kepsek -->
-          <img src="/ttd-kepsek.png" alt="Tanda Tangan Kepsek" class="relative w-36 h-20 object-contain z-0">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
+              <span class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Tipe Kepribadian (Holland Code)</span>
+              <div id="pdfKategori" class="text-lg font-black text-emerald-950"></div>
+            </div>
+
+            <div class="md:col-span-2 bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Rekomendasi Ekstrakurikuler Wajib / Pilihan</span>
+              <ul id="pdfListEkstra" class="space-y-1"></ul>
+            </div>
+          </div>
+
+          <p class="text-[10px] text-slate-500 italic leading-relaxed">
+            *Rekomendasi di atas dihasilkan secara otomatis oleh Sistem Cerdas Berbasis Algoritma RIASEC karya <strong class="text-emerald-900">Muhammad Riyadh, M.Pd</strong> berdasarkan preferensi jawaban siswa.
+          </p>
         </div>
 
-        <p class="text-xs font-extrabold text-slate-900 underline uppercase">Drs. H. Ahmad Fauzi, M.Pd</p>
-        <p class="text-[10px] text-slate-600 font-semibold">NPY. 19750812 200301 1 002</p>
+        <!-- AREA TANDA TANGAN & STEMPEL DIGITAL -->
+        <div class="mt-10 pt-4 flex justify-between items-end">
+          <div class="text-center w-48">
+            <p class="text-[11px] font-semibold text-slate-600">Mengetahui,</p>
+            <p class="text-[11px] font-bold text-slate-800 mb-12">Guru Bimbingan Konseling (BK)</p>
+            <p class="text-xs font-bold text-slate-900 underline">( .................................... )</p>
+            <p class="text-[10px] text-slate-500">NIP / NPY. -</p>
+          </div>
+
+          <div class="relative text-center w-64">
+            <p class="text-[11px] font-semibold text-slate-600">Klumpang, <span id="pdfTanggalCetak"></span></p>
+            <p class="text-[11px] font-bold text-slate-800 mb-2">Kepala SMA Swasta PAB 5 Klumpang</p>
+
+            <!-- CONTAINER STEMPEL & TTD -->
+            <div class="relative h-24 my-1 flex items-center justify-center">
+              <!-- Stempel Digital -->
+              <img src="/stempel.png" alt="Stempel Sekolah" class="absolute w-28 h-28 object-contain opacity-85 left-4 top-[-10px] pointer-events-none z-10">
+              
+              <!-- Tanda Tangan Kepsek -->
+              <img src="/ttd-kepsek.png" alt="Tanda Tangan Kepsek" class="relative w-36 h-20 object-contain z-0">
+            </div>
+
+            <p class="text-xs font-extrabold text-slate-900 underline uppercase">Drs. H. Ahmad Fauzi, M.Pd</p>
+            <p class="text-[10px] text-slate-600 font-semibold">NPY. 19750812 200301 1 002</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tombol Aksi -->
+      <div class="flex flex-col sm:flex-row gap-3 mt-6 pt-4 border-t border-slate-200">
+        <button onclick="unduhPDF()" class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold py-3 px-6 rounded-xl flex items-center justify-center gap-2 shadow-lg transition">
+          <i data-lucide="download" class="w-5 h-5 text-amber-300"></i>
+          <span>Download Dokumen Resmi (PDF)</span>
+        </button>
       </div>
     </div>
 
-  </div>
-
-  <!-- Tombol Aksi -->
-  <div class="flex flex-col sm:flex-row gap-3 mt-6 pt-4 border-t border-slate-200">
-    <button onclick="unduhPDF()" class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold py-3 px-6 rounded-xl flex items-center justify-center gap-2 shadow-lg transition">
-      <i data-lucide="download" class="w-5 h-5 text-amber-300"></i>
-      <span>Download Dokumen Resmi (PDF)</span>
-    </button>
-  </div>
-</div>
+    <!-- Footer Kredit Pengembang -->
+    <footer class="mt-12 text-center text-emerald-200/70 text-xs">
+      <p>© 2026 SMA Swasta PAB 5 Klumpang. Didesain dan dikembangkan oleh <span class="font-extrabold text-amber-300 underline">Muhammad Riyadh, M.Pd</span></p>
+    </footer>
 
   </div>
 
@@ -286,7 +297,7 @@
       
       <div class="py-4">
         <p class="text-xs text-slate-500 mb-4">Masukkan kata sandi otorisasi untuk mengakses data rekapitulasi minat bakat murid.</p>
-        <input type="password" id="inputPassWaliKelas" placeholder="Masukkan password..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-emerald-600 mb-2">
+        <input type="password" id="inputPassWaliKelas" placeholder="Masukkan password (default: admin123)..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-emerald-600 mb-2">
         <p id="errPassword" class="text-xs text-rose-600 font-bold hidden">Password salah! Silahkan coba lagi.</p>
       </div>
 
@@ -349,126 +360,225 @@
     </div>
   </div>
 
+  <!-- SCRIPT FRONTEND LOGIC -->
   <script>
     lucide.createIcons();
     let semuaDataHasil = [];
     let dataSiswaAktif = null;
 
-    // Load Soal
-    fetch('/api/soal')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('containerSoal');
-        container.innerHTML = '';
-        data.forEach((soal, index) => {
-          container.innerHTML += `
-            <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
-              <p class="font-bold text-slate-800 text-sm mb-3 flex gap-2">
-                <span class="w-6 h-6 bg-emerald-100 text-emerald-900 rounded-lg flex items-center justify-center font-black text-xs flex-shrink-0">${index + 1}</span>
-                <span>${soal.teks}</span>
-              </p>
-              <div class="flex items-center justify-between bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100">
-                <span class="text-[11px] font-bold text-rose-600">Tidak Suka</span>
-                <div class="flex gap-2">
-                  ${[1, 2, 3, 4, 5].map(val => `
-                    <label class="cursor-pointer">
-                      <input type="radio" name="q${soal.id}" value="${val}" required class="peer hidden">
-                      <div class="w-8 h-8 rounded-lg border-2 border-slate-300 peer-checked:border-emerald-600 peer-checked:bg-emerald-600 peer-checked:text-white flex items-center justify-center font-extrabold text-xs text-slate-700">
-                        ${val}
-                      </div>
-                    </label>
-                  `).join('')}
-                </div>
-                <span class="text-[11px] font-bold text-emerald-700">Sangat Suka</span>
-              </div>
-            </div>
-          `;
-        });
-        lucide.createIcons();
-      });
+    // Database Soal RIASEC Client-Side (60 Soal)
+    const daftarSoal = [
+      // Realistis (1-10)
+      { id: 1, teks: "Memperbaiki alat elektronik atau perkakas pertukangan yang rusak." },
+      { id: 2, teks: "Bekerja dengan mesin, peralatan teknik, atau perakitan fisik." },
+      { id: 3, teks: "Melakukan kegiatan aktivitas luar ruangan (outdoors) atau olahraga." },
+      { id: 4, teks: "Merakit atau merawat perangkat keras (hardware) komputer." },
+      { id: 5, teks: "Menggunakan peralatan teknis untuk membuat kerajinan/benda nyata." },
+      { id: 6, teks: "Merawat tanaman, hewan, atau kegiatan lingkungan hidup." },
+      { id: 7, teks: "Mengoperasikan mesin, kendaraan, atau instrumen teknis." },
+      { id: 8, teks: "Bekerja dengan tangan untuk menghasilkan produk kerajinan." },
+      { id: 9, teks: "Membaca denah, gambar teknik, atau skema rancangan." },
+      { id: 10, teks: "Menyelesaikan masalah teknis secara langsung dan praktis." },
 
-    // Submit Form
-    document.getElementById('formTes').addEventListener('submit', async (e) => {
+      // Investigatif (11-20)
+      { id: 11, teks: "Menganalisis fenomena alam, sains, atau teori ilmiah." },
+      { id: 12, teks: "Memecahkan teka-teki logika atau soal matematika rumit." },
+      { id: 13, teks: "Melakukan eksperimen atau penelitian laboratorium." },
+      { id: 14, teks: "Mempelajari bahasa pemrograman atau algoritma sistem." },
+      { id: 15, teks: "Membaca buku ilmu pengetahuan, biologi, kimia, atau fisika." },
+      { id: 16, teks: "Mengumpulkan data dan menganalisis sebab-akibat suatu masalah." },
+      { id: 17, teks: "Meneliti informasi mendalam sebelum mengambil kesimpulan." },
+      { id: 18, teks: "Menyukai pelajaran yang membutuhkan pemikiran kritis mendalam." },
+      { id: 19, teks: "Mencari tahu cara kerja internal suatu teknologi modern." },
+      { id: 20, teks: "Mengembangkan hipotesis atau teori baru dalam pembelajaran." },
+
+      // Artistik (21-30)
+      { id: 21, teks: "Menulis puisi, cerita pendek, artikel, atau naskah drama." },
+      { id: 22, teks: "Memainkan alat musik, menyanyi, atau mengarang lagu." },
+      { id: 23, teks: "Menggambar, melukis, atau membuat desain grafis visual." },
+      { id: 24, teks: "Mengikuti kegiatan seni tari, teater, atau pertunjukan kreatif." },
+      { id: 25, teks: "Mengambil foto atau video dengan sudut pandang estetik." },
+      { id: 26, teks: "Mendesain dekorasi, tata letak busana, atau interior." },
+      { id: 27, teks: "Berekspresi bebas tanpa aturan yang terlalu mengikat." },
+      { id: 28, teks: "Mengkritik atau mengapresiasi karya seni, film, dan musik." },
+      { id: 29, teks: "Menciptakan ide-ide orisinal yang imajinatif dan unik." },
+      { id: 30, teks: "Menata komposisi warna dan bentuk visual secara artistik." },
+
+      // Sosial (31-40)
+      { id: 31, teks: "Membantu dan memberikan nasihat kepada orang yang kesulitan." },
+      { id: 32, teks: "Mengajar, membimbing, atau menjelaskan materi kepada teman." },
+      { id: 33, teks: "Mendengarkan curhatan teman dan memberikan arahan positif." },
+      { id: 34, teks: "Berpartisipasi dalam kegiatan sosial, relawan, atau Paskibra/PMR." },
+      { id: 35, teks: "Merawat orang sakit atau memberikan pertolongan pertama." },
+      { id: 36, teks: "Bekerja sama dalam tim untuk mencapai tujuan bersama." },
+      { id: 37, teks: "Menjadi penengah atau mendamaikan teman yang berselisih." },
+      { id: 38, teks: "Berkomunikasi dengan ramah dan mudah bergaul dengan orang baru." },
+      { id: 39, teks: "Mengorganisasi kegiatan keagamaan atau kerohanian sekolah." },
+      { id: 40, teks: "Mendampingi atau mengayomi teman dalam kelompok belajar." },
+
+      // Enterprising (41-50)
+      { id: 41, teks: "Memimpin sebuah organisasi, tim proyek, atau kepanitiaan." },
+      { id: 42, teks: "Berbicara di depan umum, presentasi, atau pidato." },
+      { id: 43, teks: "Membujuk atau meyakinkan orang lain agar setuju ide Anda." },
+      { id: 44, teks: "Berjualan, berwirausaha, atau menawarkan produk/jasa." },
+      { id: 45, teks: "Mengambil keputusan penting dan berani mengambil risiko." },
+      { id: 46, teks: "Mengatur strategi untuk memenangkan kompetisi/perlombaan." },
+      { id: 47, teks: "Menginisiasi atau membuat program/kegiatan baru di sekolah." },
+      { id: 48, teks: "Berdebat dan mempertahankan argumen dengan alasan kuat." },
+      { id: 49, teks: "Mengarahkan anggota tim dalam pembagian tugas organisasi." },
+      { id: 50, teks: "Memengaruhi orang lain untuk melakukan perubahan positif." },
+
+      // Konvensional (51-60)
+      { id: 51, teks: "Menyusun dokumen, file, atau arsip data secara rapi." },
+      { id: 52, teks: "Mengelola pencatatan keuangan, kas, atau pembukuan." },
+      { id: 53, teks: "Bekerja sesuai dengan petunjuk, jadwal, dan aturan tertulis." },
+      { id: 54, teks: "Memeriksa detail data agar tidak ada kesalahan pencatatan." },
+      { id: 55, teks: "Menginput data, rekapitulasi nilai, atau administrasi sekolah." },
+      { id: 56, teks: "Menjaga kerapihan alat tulis, meja belajar, dan arsip." },
+      { id: 57, teks: "Mengikuti standar operasional yang terstruktur dengan teliti." },
+      { id: 58, teks: "Membantu tugas administrasi di perpustakaan atau OSIS." },
+      { id: 59, teks: "Mengatur jadwal harian agar semua tugas selesai tepat waktu." },
+      { id: 60, teks: "Menyimpan dan mengelompokkan catatan pelajaran secara sistematis." }
+    ];
+
+    // Pemetaan Ekstrakurikuler berdasarkan Kepribadian Holland (RIASEC)
+    const ekstrakurikulerMap = {
+      Realistis: ["Pramuka", "Paskibra", "PMR (Palang Merah Remaja)", "Olahraga (Futsal/Basket/Voli)"],
+      Investigatif: ["KIR (Karya Ilmiah Remaja)", "Klub Komputer & Coding", "Klub Matematika & Sains"],
+      Artistik: ["Seni Musik / Band", "Seni Tari Tradisional & Modern", "Teater Sekolah", "Desain Grafis & Fotografi"],
+      Sosial: ["PMR (Palang Merah Remaja)", "Pramuka", "Kerohanian Islam (Rohis) / Kristen (Rokris)", "Pendidikan Sebaya"],
+      Enterprising: ["Kewirausahaan Siswa (KWU)", "OSIS / MPK", "Debat Bahasa Indonesia / Inggris"],
+      Konvensional: ["Koperasi Siswa", "Tim Administrasi Perpustakaan", "Jurnalistik / Mading Sekolah"]
+    };
+
+    // Render Soal ke HTML
+    function renderSoal() {
+      const container = document.getElementById('containerSoal');
+      container.innerHTML = '';
+      daftarSoal.forEach((soal, index) => {
+        container.innerHTML += `
+          <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+            <p class="font-bold text-slate-800 text-sm mb-3 flex gap-2">
+              <span class="w-6 h-6 bg-emerald-100 text-emerald-900 rounded-lg flex items-center justify-center font-black text-xs flex-shrink-0">${index + 1}</span>
+              <span>${soal.teks}</span>
+            </p>
+            <div class="flex items-center justify-between bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100">
+              <span class="text-[11px] font-bold text-rose-600">Tidak Suka</span>
+              <div class="flex gap-2">
+                ${[1, 2, 3, 4, 5].map(val => `
+                  <label class="cursor-pointer">
+                    <input type="radio" name="q${soal.id}" value="${val}" required class="peer hidden">
+                    <div class="w-8 h-8 rounded-lg border-2 border-slate-300 peer-checked:border-emerald-600 peer-checked:bg-emerald-600 peer-checked:text-white flex items-center justify-center font-extrabold text-xs text-slate-700">
+                      ${val}
+                    </div>
+                  </label>
+                `).join('')}
+              </div>
+              <span class="text-[11px] font-bold text-emerald-700">Sangat Suka</span>
+            </div>
+          </div>
+        `;
+      });
+      lucide.createIcons();
+    }
+
+    // Inisialisasi awal
+    renderSoal();
+
+    // Submit Form (Kalkulasi Skor Client-Side)
+    document.getElementById('formTes').addEventListener('submit', (e) => {
       e.preventDefault();
-      const nama = document.getElementById('nama').value;
-      const nisn = document.getElementById('nisn').value;
+
+      const nama = document.getElementById('nama').value.trim();
+      const nisn = document.getElementById('nisn').value.trim();
       const kelasEl = document.querySelector('input[name="kelas"]:checked');
       const kelas = kelasEl ? kelasEl.value : '';
 
-      const formData = new FormData(e.target);
-      const jawaban = {};
-      formData.forEach((value, key) => { if(key.startsWith('q')) jawaban[key] = value; });
-
-      try {
-        const response = await fetch('/api/proses-tes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nama, nisn, kelas, jawaban })
-        });
-
-        const hasil = await response.json();
-
-        if (!response.ok) {
-          // Tampilkan pesan error jika NISN sudah terdaftar
-          alert("⚠️ Perhatian:\n" + hasil.message);
-          return;
-        }
-
-        tampilkanHasilCard(
-          hasil.siswa.nama, 
-          hasil.siswa.kelas, 
-          hasil.siswa.nisn, 
-          hasil.kategoriDominan, 
-          hasil.rekomendasiEkstra
-        );
-      } catch (err) {
-        alert("Terjadi kesalahan koneksi ke server.");
+      if (!nama || !nisn || !kelas) {
+        alert("⚠️ Mohon lengkapi Nama, NISN, dan Pilih Kelas terlebih dahulu!");
+        return;
       }
+
+      const skor = { Realistis: 0, Investigatif: 0, Artistik: 0, Sosial: 0, Enterprising: 0, Konvensional: 0 };
+      const formData = new FormData(e.target);
+
+      formData.forEach((value, key) => {
+        if (key.startsWith('q')) {
+          const idSoal = parseInt(key.replace('q', ''));
+          const nilai = parseInt(value) || 0;
+
+          if (idSoal <= 10) skor.Realistis += nilai;
+          else if (idSoal <= 20) skor.Investigatif += nilai;
+          else if (idSoal <= 30) skor.Artistik += nilai;
+          else if (idSoal <= 40) skor.Sosial += nilai;
+          else if (idSoal <= 50) skor.Enterprising += nilai;
+          else if (idSoal <= 60) skor.Konvensional += nilai;
+        }
+      });
+
+      // Tentukan Kategori Dominan
+      const hasilUrut = Object.entries(skor).sort(([, a], [, b]) => b - a);
+      const kategoriDominan = hasilUrut[0][0];
+      const rekomendasi = ekstrakurikulerMap[kategoriDominan] || [];
+
+      // Simpan Data Ke LocalStorage untuk Otorisasi Wali Kelas
+      const dataSiswaBaru = {
+        tanggal: new Date().toLocaleDateString('id-ID'),
+        nama,
+        nisn,
+        kelas,
+        kategoriDominan,
+        rekomendasi
+      };
+
+      let rekapData = JSON.parse(localStorage.getItem('rekap_minat_bakat') || '[]');
+      rekapData = rekapData.filter(item => item.nisn !== nisn); // hindari duplikasi NISN
+      rekapData.unshift(dataSiswaBaru);
+      localStorage.setItem('rekap_minat_bakat', JSON.stringify(rekapData));
+
+      // Tampilkan Hasil Card
+      tampilkanHasilCard(nama, kelas, nisn, kategoriDominan, rekomendasi);
     });
 
     function tampilkanHasilCard(nama, kelas, nisn, kategori, rekomendasi) {
-  dataSiswaAktif = { nama, kelas, nisn, kategori, rekomendasi };
-  
-  // Populate Data Siswa
-  document.getElementById('pdfNama').innerText = nama;
-  document.getElementById('pdfNISN').innerText = nisn;
-  document.getElementById('pdfKelas').innerText = kelas;
-  document.getElementById('pdfKategori').innerText = kategori;
+      dataSiswaAktif = { nama, kelas, nisn, kategori, rekomendasi };
+      
+      document.getElementById('pdfNama').innerText = nama;
+      document.getElementById('pdfNISN').innerText = nisn;
+      document.getElementById('pdfKelas').innerText = kelas;
+      document.getElementById('pdfKategori').innerText = kategori;
 
-  // Tanggal & Nomor Surat Otomatis
-  const hariIni = new Date();
-  const opsiTanggal = { day: 'numeric', month: 'Long', year: 'numeric' };
-  document.getElementById('pdfTanggalCetak').innerText = hariIni.toLocaleDateString('id-ID', opsiTanggal);
-  document.getElementById('pdfNoSurat').innerText = Math.floor(1000 + Math.random() * 9000);
+      const hariIni = new Date();
+      const opsiTanggal = { day: 'numeric', month: 'long', year: 'numeric' };
+      document.getElementById('pdfTanggalCetak').innerText = hariIni.toLocaleDateString('id-ID', opsiTanggal);
+      document.getElementById('pdfNoSurat').innerText = Math.floor(1000 + Math.random() * 9000);
 
-  // Render List Ekstrakurikuler
-  const listEkstra = document.getElementById('pdfListEkstra');
-  listEkstra.innerHTML = '';
-  rekomendasi.forEach(e => {
-    listEkstra.innerHTML += `
-      <li class="text-xs font-bold text-emerald-950 flex items-center gap-2">
-        <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span>
-        <span>${e}</span>
-      </li>`;
-  });
+      const listEkstra = document.getElementById('pdfListEkstra');
+      listEkstra.innerHTML = '';
+      rekomendasi.forEach(e => {
+        listEkstra.innerHTML += `
+          <li class="text-xs font-bold text-emerald-950 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span>
+            <span>${e}</span>
+          </li>`;
+      });
 
-  document.getElementById('hasilBox').classList.remove('hidden');
-  document.getElementById('hasilBox').scrollIntoView({ behavior: 'smooth' });
-}
+      document.getElementById('hasilBox').classList.remove('hidden');
+      document.getElementById('hasilBox').scrollIntoView({ behavior: 'smooth' });
+    }
 
-function unduhPDF() {
-  const element = document.getElementById('areaCetakPDF');
-  
-  const opt = {
-    margin:       [0.5, 0.5, 0.5, 0.5], // Margin halaman (Atas, Kiri, Bawah, Kanan dalam cm)
-    filename:     `Surat_Rekomendasi_Ekskul_${dataSiswaAktif ? dataSiswaAktif.nama.replace(/\s+/g, '_') : 'Siswa'}.pdf`,
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2, useCORS: true }, // useCORS memastikan gambar lokal termuat sempurna
-    jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
-  };
+    function unduhPDF() {
+      const element = document.getElementById('areaCetakPDF');
+      const opt = {
+        margin:       [0.5, 0.5, 0.5, 0.5],
+        filename:     `Surat_Rekomendasi_Ekskul_${dataSiswaAktif ? dataSiswaAktif.nama.replace(/\s+/g, '_') : 'Siswa'}.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
+      };
 
-  html2pdf().set(opt).from(element).save();
-}
+      html2pdf().set(opt).from(element).save();
+    }
 
     // Modal Login Auth Handlers
     function mintaPasswordWaliKelas() {
@@ -481,18 +591,12 @@ function unduhPDF() {
       document.getElementById('modalLoginWaliKelas').classList.add('hidden');
     }
 
-    async function verifikasiPassword() {
+    function verifikasiPassword() {
       const password = document.getElementById('inputPassWaliKelas').value;
 
-      const res = await fetch('/api/wali-kelas/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password })
-      });
-
-      if (res.ok) {
-        const result = await res.json();
-        semuaDataHasil = result.data;
+      // Password default Wali Kelas (Client-side validation)
+      if (password === 'admin123' || password === 'walikelas') {
+        semuaDataHasil = JSON.parse(localStorage.getItem('rekap_minat_bakat') || '[]');
         tutupModalLogin();
         document.getElementById('modalWaliKelas').classList.remove('hidden');
         renderTabelWaliKelas(semuaDataHasil);
