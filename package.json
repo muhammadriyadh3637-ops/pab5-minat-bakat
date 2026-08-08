@@ -1,0 +1,12 @@
+{
+  "name": "aplikasi-rekomendasi-ekskul-pab5",
+  "version": "1.0.0",
+  "description": "Sistem Rekomendasi Ekstrakurikuler SMA Swasta PAB 5 Klumpang",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
