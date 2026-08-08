@@ -30,7 +30,7 @@ app.get('/api/soal', (req, res) => {
   }
 });
 
-// API Endpoint 2: Proses Tes & Hitung Rekomendasi (Safe Mode untuk Vercel)
+// API Endpoint 2: Proses Tes & Hitung Rekomendasi (Safe Mode)
 app.post('/api/proses-tes', (req, res) => {
   try {
     const { nama, nisn, kelas, jawaban } = req.body;
